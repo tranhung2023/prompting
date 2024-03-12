@@ -20,7 +20,6 @@ import time
 import bittensor as bt
 import argparse
 # Bittensor Miner Template:
-import prompting
 from prompting.protocol import PromptingSynapse
 # import base miner class which takes care of most of the boilerplate
 from neurons.miner import Miner
