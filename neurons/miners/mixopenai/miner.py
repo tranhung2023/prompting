@@ -131,6 +131,10 @@ class OpenAIMiner(Miner):
                 response = chain.invoke(
                     {"role": role, "input": message}
                 )
+
+                if "I'm sorry" in response: 
+                    bt.logging.debug(f"💬 Querying openai and wikipedia: {message}")
+                    response = self.agent.run(message)
                 # if (response) {
                 #     bt.logging.debug(f"💬 Querying openai and wikipedia: {message}")
 
